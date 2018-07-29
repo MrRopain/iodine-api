@@ -15,7 +15,9 @@ class Config {
      * @param {string} path
      * @memberof Config
      */
-    public constructor(private path: string) {}
+    public constructor(private path: string) {
+        this.load();
+    }
 
     /**
      * Loads the config.
@@ -32,7 +34,7 @@ class Config {
      * @memberof Config
      */
     public save(): void {
-        fs.writeFileSync(this.path, JSON.stringify(this.data));
+        fs.writeFileSync(this.path, JSON.stringify(this.data, null, 4));
     }
 }
 
