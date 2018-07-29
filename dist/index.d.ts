@@ -3,4 +3,11 @@ import Command from "./lib/command/command";
 import CommandData from "./lib/command/commandData";
 import CommandRegistry from "./lib/command/commandRegistry";
 import Config from "./lib/config/config";
-export { Bot, Command, CommandData, CommandRegistry, Config, };
+declare const _default: {
+    Bot: typeof Bot;
+    Command: typeof Command;
+    CommandData: typeof CommandData;
+    CommandRegistry: typeof CommandRegistry;
+    Config: typeof Config;
+};
+export default _default;

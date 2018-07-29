@@ -4,7 +4,7 @@ import CommandData from "./lib/command/commandData";
 import CommandRegistry from "./lib/command/commandRegistry";
 import Config from "./lib/config/config";
 
-export {
+export default {
     Bot,
     Command,
     CommandData,
