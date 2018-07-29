@@ -18,6 +18,7 @@ class Config {
      */
     constructor(path) {
         this.path = path;
+        this.load();
     }
     /**
      * Loads the config.
@@ -33,7 +34,7 @@ class Config {
      * @memberof Config
      */
     save() {
-        fs_1.default.writeFileSync(this.path, JSON.stringify(this.data));
+        fs_1.default.writeFileSync(this.path, JSON.stringify(this.data, null, 4));
     }
 }
 exports.default = Config;

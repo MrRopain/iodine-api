@@ -13,6 +13,9 @@ class Bot {
     getConfig() {
         return this.config;
     }
+    getConfigData() {
+        return this.config.data;
+    }
     getCommandRegistry() {
         return this.commandRegistry;
     }
