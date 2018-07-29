@@ -3,8 +3,8 @@ import Config from "../config/config";
 
 abstract class Bot {
 
-    private config: Config;
-    private commandRegistry: CommandRegistry;
+    protected config: Config;
+    protected commandRegistry: CommandRegistry;
 
     protected constructor(configPath: string) {
         this.config = new Config(configPath);
@@ -13,6 +13,10 @@ abstract class Bot {
 
     public getConfig(): Config {
         return this.config;
+    }
+
+    public getConfigData(): any {
+        return this.config.data;
     }
 
     public getCommandRegistry(): CommandRegistry {
